@@ -7,12 +7,11 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/api/server.js",
-    "dev": "ts-node src/api/server.ts",
-    "test": "jest --runInBand",
-    "demo": "node demo-soul.js",
-    "soul": "npm run demo",
-    "postbuild": "node dist/soul/postbuild.js || true"
+    "start": "node dist/tonesoul-core.js",
+    "dev": "ts-node src/tonesoul-core.ts",
+    "test": "ts-node tests/test-simple.ts",
+    "test:full": "ts-node tests/test-monitoring-system.ts",
+    "clean": "rm -rf dist"
   },
   "jest": {
     "preset": "ts-jest",
